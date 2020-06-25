@@ -7,7 +7,7 @@
     "benchmark": "node -v && node test/benchmark/serialize.js",
     "test": "nyc --reporter=lcov mocha test/unit",
     "browserifyOld": "sed 's/module.exports =//g' index.js > indexPrepared.js; browserify indexPrepared.js | uglifyjs >  browserified/min.js; browserify indexPrepared.js -o browserified/index.js; ",
-    "browserify": "browserify --s index.js | uglifyjs >  browserified/min.js; browserify  --s index.js -o browserified/index.js; ",
+    "browserify": "browserify --s index.js | uglifyjs >  browserified/min.js; browserify index.js  --standalone myBundle > browserified/index.js; ",
     "notes": "https://stackoverflow.com/questions/23296094/browserify-how-to-call-function-bundled-in-a-file-generated-through-browserify"
   },
   "repository": {
