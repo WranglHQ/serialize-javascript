@@ -2263,7 +2263,8 @@ function deleteFunctions(obj){
     }
 }
 
-module.exports = 
+// module.exportsPRESERVED = 
+ 
 function serialize(obj, options) {
     options || (options = {});
 

@@ -56,7 +56,7 @@ function deleteFunctions(obj){
 }
 
 // module.exportsPRESERVED = 
-module.exports = 
+ 
 function serialize(obj, options) {
     options || (options = {});
 

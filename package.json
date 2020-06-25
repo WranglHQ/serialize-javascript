@@ -6,7 +6,7 @@
   "scripts": {
     "benchmark": "node -v && node test/benchmark/serialize.js",
     "test": "nyc --reporter=lcov mocha test/unit",
-    "browserify": "browserify index.js | uglifyjs >  browserified/min.js; browserify index.js -o browserified/index.js; "
+    "browserify": "sed 's/module.exports =//g' index.js > indexPrepared.js; browserify indexPrepared.js | uglifyjs >  browserified/min.js; browserify indexPrepared.js -o browserified/index.js; "
   },
   "repository": {
     "type": "git",
